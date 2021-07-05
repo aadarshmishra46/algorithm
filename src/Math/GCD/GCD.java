@@ -1,4 +1,4 @@
-package com.company.Array;
+package Math.GCD;
 
 import java.util.Scanner;
 

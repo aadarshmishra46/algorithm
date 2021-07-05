@@ -29,7 +29,7 @@ Sample Input:-
 Sample Output:-
 12 15 21
  */
-package com.company.Array;
+package Math.GCD;
 
 import java.util.Scanner;
 

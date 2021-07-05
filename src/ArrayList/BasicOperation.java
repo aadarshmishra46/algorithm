@@ -6,7 +6,9 @@ import java.util.Iterator;
 
 public class BasicOperation {
     public static void main(String[] args) {
-        HashSet hs=new HashSet();
+        HashSet hs = new HashSet();
         hs.add("AAdarsh");
-        System.out.println(hs.get(0));
+        // System.out.println(hs.get(0));
+    }
+
 }
