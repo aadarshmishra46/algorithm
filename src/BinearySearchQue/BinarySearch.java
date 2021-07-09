@@ -1,4 +1,4 @@
-package com.company.Array;
+package BinearySearchQue;
 
 import java.util.Arrays;
 
