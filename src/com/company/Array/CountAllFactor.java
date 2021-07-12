@@ -36,4 +36,32 @@ public class CountAllFactor{
         long n= sc.nextLong();
         countAllFactor(n);
     }
+
+    public static class MinPlateform {
+        public static int minPlateForm(int[] arr, int[] dep , int n){
+            // base condition
+            int min=1;
+            int result=1;
+            for (int i = 0; i < n; i++) {
+                min=1;
+                for (int j = i+1; j <n ; j++) {
+                    if(arr[i]>=arr[j] && arr[i]<=dep[j]  || arr[j]>=arr[i] && arr[j]<=dep[i])//
+                    {
+                        min++;
+                    }
+                }// 1 , 2
+               result=  Math.max(min,result);
+            }
+
+            return result;
+        }
+        public static void main(String[] args) {
+            //taking input
+            int arr[] = {900, 840, 950, 1100, 1500, 1800};
+            int dep[] = {910, 945, 1005, 1130, 1805, 2000};
+            int n=arr.length;
+           int min=minPlateForm(arr, dep,n);
+            System.out.println(min);
+        }
+    }
 }
