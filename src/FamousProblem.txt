@@ -1,0 +1,6 @@
+1. find subarray withen given sum  -- two pointer approch
+https://www.geeksforgeeks.org/find-subarray-with-given-sum/
+2.ind subarray with given sum | Set 2 (Handles Negative Numbers)-- using hashset
+https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/
+same question print index also
+

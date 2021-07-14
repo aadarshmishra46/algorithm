@@ -1,3 +1,5 @@
+package LinkedListConcept;
+
 public class MergeLinkedListDemo {
     Node head;// for first elemenet refernce
 
