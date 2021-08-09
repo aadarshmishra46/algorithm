@@ -19,7 +19,6 @@ public class Heapify {
         int last=al.get(al.size()-1);
         int i= al.size()-1;
         while (i>0){
-
         }
     }
 }

@@ -5,25 +5,25 @@ import javafx.collections.ObservableIntegerArray;
 import java.util.Scanner;
 
 public class BinaraySeachElement {
-    public static void binarySearchUsingIteration(int[] arr,int start, int end, int x){
-        boolean check=false;
-        while (start<=end){
+    public static int binarySearchUsingIteration(int[] arr,int start, int end, int x){
+      // base condition
+        if(start>end) {
+            return -1;
+        }
+
             int mid=start +(end-start)/2;// 1 2 3 4 5
             if(arr[mid]==x){
-                System.out.println(x+" present in array at index: "+mid);
-                check=true;
-                break;
+               return mid;
             }
             else if(arr[mid]<x){// for reverse else if(arr[mid]<x)
-                start=mid+1;
+                //start=mid+1;
+                binarySearchUsingIteration(arr,mid+1,end,x);
             }
             else{//arr[mid]>x
-                end=mid-1;
+                binarySearchUsingIteration(arr,start,mid-1,x);
             }
+            return -1;
 
-        }
-        if(check==false)
-            System.out.println("Number is not present in array");
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -34,6 +34,6 @@ public class BinaraySeachElement {
         for (int i = 0; i < n; i++) {
             arr[i]=sc.nextInt();
         }
-        binarySearchUsingIteration(arr,0,n-1,x);
+        System.out.println( binarySearchUsingIteration(arr,0,n-1,x));
     }
 }

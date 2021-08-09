@@ -1,7 +1,5 @@
 package BinearySearchQue;
 
-import com.sun.org.apache.bcel.internal.generic.ARETURN;
-
 import java.util.Scanner;
 
 public class SearchElementInCircularSortedArray {

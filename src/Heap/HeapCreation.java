@@ -10,12 +10,14 @@ public class HeapCreation {
         int n=sc.nextInt();
         ArrayList<Integer> al=new ArrayList<>();// for inserting an element thats why n+1
         for (int i = 0; i < n; i++) {
-            al.add(sc.nextInt());
+            int x= sc.nextInt();
+            insertionInHeap(al,x);
         }
         System.out.println(al);
         System.out.print("Enter to Insert an value in heap ");
         int x= sc.nextInt();
         insertionInHeap(al,x);
+        System.out.println(al);
         System.out.println("Deletion of root node ");
         deletionInHeap(al);
 
@@ -33,7 +35,8 @@ public class HeapCreation {
            else
                break;
        }
-        System.out.println(al);
+
+
     }
     private static void deletionInHeap(ArrayList<Integer> al) {
         if(al.size()==0)
