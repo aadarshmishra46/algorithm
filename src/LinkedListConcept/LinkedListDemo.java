@@ -1,14 +1,15 @@
 package LinkedListConcept;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.concurrent.DelayQueue;
 
 public class LinkedListDemo {
 
     public static void main(String[] args) {
         List<Integer> ll=new LinkedList<>();
+        Deque<String> deque
+                = new LinkedList<String>();
        ll.add(2);
        ll.add(4);
        ll.add(5);

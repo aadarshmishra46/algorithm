@@ -1,0 +1,20 @@
+/*.......................For max Node .......................................*\
+Method 1:
+static int max=Integer.MIN_VALUE;
+  public static int max(Node node) {
+    // write your code here
+    for(Node child:node.children){
+        int value=child.data;
+        if(value>max){
+            max=value;
+        }
+    }
+    for(Node child:node.children){
+    max(child);
+    }
+    if(node.data>max){
+        max=node.data;
+    }
+    return max;
+  }
+  Method 2:

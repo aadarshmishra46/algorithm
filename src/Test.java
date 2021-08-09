@@ -1,54 +1,58 @@
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+/*
+class Result {
+
+    public static void utopianTree(int n) {
+        n = 5;
+        int t = 1;
+        for (int i = 1;  i<= n; i++) {
+            if (i%2 == 0)
+            {
+                t = t+1;
+            }else
+            {
+                t = t*2;
+            }
+
+        }
+        System.out.println(t);
+
+    }
+}
 
 public class Test {
-    static final int ASCII_SIZE = 256;
-    static int getMaxOccuringChar(String str)
-    {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int count[] = new int[ASCII_SIZE];
+        int t = Integer.parseInt(bufferedReader.readLine().trim());
 
-        int len = str.length();
-        for (int i=0; i<len; i++)
-            count[str.charAt(i)]++;
+        IntStream.range(0, t).forEach(tItr -> {
+            try {
+                int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        int max = -1;
-        char result = ' ';
-        for (int i = 0; i < len; i++) {
-            if (max < count[str.charAt(i)]) {
-                max = count[str.charAt(i)];
-                result = str.charAt(i);
+                int result = Result.utopianTree(n);
 
+                bufferedWriter.write(String.valueOf(result));
+                bufferedWriter.newLine();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
             }
-        }
-        int count1=0;
-        for (int i = 0; i < len; i++) {
-            if(str.charAt(i)==result)
-            {
-                count1++;
-            }
+        });
 
-        }
-
-        return count1;
+        bufferedReader.close();
+        bufferedWriter.close();
     }
-
-    public static void main (String[] args)
-    {
-        Scanner sc=new Scanner(System.in);
-        String s=sc.nextLine();
-        int rep=getMaxOccuringChar(s);
-        if(rep>s.length()/2)
-        {
-            System.out.println((s.length()-(rep) )*2);
-        }
-        else
-            System.out.println(s.length());
-
-
-
-    }
-
 }
+
+ */
