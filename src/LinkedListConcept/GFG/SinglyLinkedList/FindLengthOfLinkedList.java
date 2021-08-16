@@ -2,7 +2,15 @@ package LinkedListConcept.GFG.SinglyLinkedList;
 
 public class FindLengthOfLinkedList {
     Node head;
+static   class Node {
+    int data;
+  Node next;
 
+    public Node(int data) {
+        this.data = data;
+        next = null;
+    }
+}
         //data pushing at end
         public void append(int new_data)
         {
@@ -58,14 +66,5 @@ public class FindLengthOfLinkedList {
         System.out.println( list.size());
 
 
-    }
-}
- class Node {
-    int data;
-    Node next;
-
-    public Node(int data) {
-        this.data = data;
-        next = null;
     }
 }
