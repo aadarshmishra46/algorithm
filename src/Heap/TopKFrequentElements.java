@@ -30,7 +30,6 @@ public class TopKFrequentElements {
             if(pq.size()>k){
                 pq.poll();
             }
-
         }
         while (pq.size()>0){
             System.out.println(pq.poll().getValue());

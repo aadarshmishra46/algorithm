@@ -18,11 +18,11 @@ public class KthSmallestElement {
         PriorityQueue<Integer> pq=new PriorityQueue<>(Comparator.reverseOrder());
         for (int i = 0; i < n; i++) {
                 pq.add(arr[i]);//7
-            System.out.println("Queue"+pq);
+         //   System.out.println("Queue"+pq);
                 if(pq.size()>k){
                     pq.poll();
                 }
-            System.out.println("Queue"+pq);
+         //   System.out.println("Queue"+pq);
         }
         return pq.peek();
     }

@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 
 public class KClosest {
     public static void main(String[] args) {
-        int[] arr={6,5,3,2,8,10,9};//2 3 5 6 8 9 10 ==5 6 8
+        int[] arr={6,6,5,3,2,8,10,9};//2 3 5 6 8 9 10 ==5 6 8
         int k=3;
         int x=6;// find k=3 closet number of x=6
         kClosest(arr,arr.length,k,x);

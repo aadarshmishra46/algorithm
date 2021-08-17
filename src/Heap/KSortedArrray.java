@@ -13,7 +13,7 @@ public class KSortedArrray {
     }
 
     private static void kSortedArray(int[] arr, int length, int k) {
-        PriorityQueue<Integer> pq=new PriorityQueue<>();
+        PriorityQueue<Integer> pq=new PriorityQueue<>();//min heap
         for (int i = 0; i < arr.length; i++) {
             pq.add(arr[i]);
             if(pq.size()>k){

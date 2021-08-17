@@ -13,11 +13,11 @@ public class KthMaxElement {
         PriorityQueue<Integer> pq=new PriorityQueue<>();
         for (int i = 0; i < length; i++) {
            pq.add(arr[i]);
-            System.out.println("Queue"+pq);
+        //    System.out.println("Queue"+pq);
             if(pq.size()>k){
                 pq.poll();
             }
-            System.out.println("Queue"+pq);
+           // System.out.println("Queue"+pq);
         }
         return pq.peek();
     }

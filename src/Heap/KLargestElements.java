@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 public class KLargestElements {
     public static void main(String[] args) {
         int[] arr={20,4,3,2,5,8,10,11,12};// 2 3 4 5 7 8 10 11 12
-        int k=3;
+        int k=5;
       kLargestElements(arr,arr.length,k);
     }
 
@@ -17,8 +17,6 @@ public class KLargestElements {
                 pq.poll();
             }
         }
-        while (pq.size()>0){
-            System.out.println(pq.poll());
-        }
+        System.out.println(pq.peek());
     }
 }

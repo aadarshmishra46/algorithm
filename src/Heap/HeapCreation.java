@@ -11,33 +11,57 @@ public class HeapCreation {
         ArrayList<Integer> al=new ArrayList<>();// for inserting an element thats why n+1
         for (int i = 0; i < n; i++) {
             int x= sc.nextInt();
-            insertionInHeap(al,x);
+            maxHeapInsertion(al,x);
         }
         System.out.println(al);
         System.out.print("Enter to Insert an value in heap ");
-        int x= sc.nextInt();
-        insertionInHeap(al,x);
         System.out.println(al);
-        System.out.println("Deletion of root node ");
-        deletionInHeap(al);
-
+     //   System.out.println("Deletion of root node ");
+        //deletionInHeap(al);
     }
 
 
-    private static void insertionInHeap(ArrayList al,int x) {
+
+
+
+
+
+
+
+
+
+
+
+    private static void maxHeapInsertion(ArrayList<Integer> al, int x) {
         al.add(x);
-       int size= al.size()-1;
-       while (size>0){
-           if((int)al.get(size)>(int)al.get(size/2)){
-               Collections.swap(al,size,size/2);
-               size=size/2;
-           }
-           else
-               break;
-       }
-
-
+        int index=al.size()-1;// 2  1
+        while (index>0) {
+            if (al.get(index) < al.get((index - 1) / 2)) {
+                Collections.swap(al, index, (index - 1) / 2);
+                index = (index - 1) / 2;
+            } else
+                break;
+        }
     }
+
+
+
+
+//
+//    private static void insertionInHeap(ArrayList al,int x) {// [5 1  ] 4
+//        al.add(x);// [ 5 1  4]
+//       int index= al.size()-1; //2
+//       while (index>0){
+//           if((int)al.get(index)>(int)al.get(index/2)){// agar parent chhota hai to swap honga max heap
+//               Collections.swap(al,index,index/2);// [5 1]
+//               index=index/2;// 1/2 =
+//           }
+//           else
+//               break;
+//       }
+//
+//
+//    }
     private static void deletionInHeap(ArrayList<Integer> al) {
         if(al.size()==0)
             return;
