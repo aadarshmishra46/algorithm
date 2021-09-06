@@ -1,8 +1,7 @@
-package DynamicProgamming.Knapsack_01;
+package DynamicProgamming.Knapsack_01_and_Knapsack_01_BasedProblem;
 
-import java.util.Arrays;
 public class RecursionWithMemorization {
-    static int[][] t=new int[5][5];
+    static int[][] t=new int[5][8];
 
     public static void main(String[] args) {
         int[] wt={1,2,4,5};
@@ -10,7 +9,7 @@ public class RecursionWithMemorization {
         int W=7;
 
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < 8; j++) {
                t[i][j]=-1;
             }
         }
