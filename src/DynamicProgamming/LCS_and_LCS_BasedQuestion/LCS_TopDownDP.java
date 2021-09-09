@@ -12,8 +12,8 @@ For example, “abc”,  “abg”, “bdf”, “aeg”,  ‘”acefg”, .. et
 public class LCS_TopDownDP {
     public static void main(String[] args) {
         Scanner scc=new Scanner(System.in);
-        String x= scc.nextLine();
-        String y= scc.nextLine();
+        String x= "babbb";
+        String y="bbbab";
         int lenght_lcs=lcs(x,y,x.length(),y.length());
         System.out.println(lenght_lcs);
     }

@@ -43,27 +43,23 @@ public class Print_LCS {
         int i=m;
         int j=n;
  while (i>0 && j >0){
-                if(i==0 ||  j==0){
-                    break;
-                }
-                if(x.charAt(i-1)==y.charAt(j-1)){
+        if(x.charAt(i-1)==y.charAt(j-1)){
                     s = s+x.charAt(i-1);
 
 
                     i--;
                     j--;
                 }
-                else
-                {
-                    if(t[i-1][j]>t[i][j-1]){
-
-                        i--;
-                    }
-                    else if(t[i-1][j]<t[i][j-1])
+                else {
+                    if (t[i - 1][j] < t[i][j - 1]) {
 
                         j--;
+                    }else {
+                        i--;
+                    }
                 }
             }
+
             StringBuffer sb=new StringBuffer(s);
         System.out.println(sb.reverse());
     }

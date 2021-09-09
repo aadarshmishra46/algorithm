@@ -51,7 +51,7 @@ public class DetectLoopInLinkedList{
         HashSet<Node> hs=new HashSet<>();
         Node temp=head;
         while (temp!=null){
-            if(hs.add(temp))
+            if(!hs.add(temp))
                 return true;
             temp=temp.next;
         }
